@@ -1,0 +1,50 @@
+Table viajes {
+  idViaje integer [primary key]
+  cantidadCuposLlenosPasajeros integer
+  cantidadCuposLlenosPaqueteria integer
+  equipaje bool
+  idBus integer
+  fechayHora timestamp
+  ciudadOrigen int
+  ciudadDestino int
+  cuposLlenosPasajeros bool
+  cuposLlenosPaqueteria bool
+
+}
+Table boletosOfacturaViajes {
+  idViaje integer
+  nombreUsuario varchar
+  idUsuario integer
+  equipaje bool
+  cantidadEquipaje integer
+  pesoEquipaje integer
+  precio integer
+}
+Table facturaEnvios {
+  idEnvio integer
+  idViaje integer
+  nombreRemitente integer
+  idRemitente integer
+  nombreDestinatario integer
+  idDestinatario integer
+  pesoPaquete integer
+  precio integer
+}
+
+Table buses {
+  idBus integer [primary key]
+  conductor varchar
+  empresa varchar
+  aforo integer
+  cantidadDePaquetes integer
+}
+
+Table sedes {
+  idSede integer [primary key]
+  nombre varchar
+}
+Ref: viajes.idBus < buses.idBus
+Ref: boletosOfacturaViajes.idViaje < viajes.idViaje
+Ref: facturaEnvios.idViaje < viajes.idViaje
+Ref: viajes.ciudadOrigen < sedes.idSede
+Ref: viajes.ciudadDestino < sedes.idSede
