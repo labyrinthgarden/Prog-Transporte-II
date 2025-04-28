@@ -57,10 +57,6 @@
     -fx-text-fill: white;
 }
 
-.text-field:focused .prompt-text {
-    -fx-text-fill: #white;
-}
-
 .combo-box {
     -fx-background-color: transparent;
     -fx-border-color: transparent;
