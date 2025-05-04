@@ -1,0 +1,151 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #00000f;
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+#titulo {
+    -fx-font-size: 30px;
+}
+#feedback {
+    -fx-font-weight: bold;
+    -fx-text-fill: grey;
+    -fx-font-size: 12px;
+}
+
+.button {
+    -fx-background-color: #4B0082;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15;
+}
+.button:hover {
+    -fx-background-color: #5e0b9c;
+}
+#boton-grande {
+    -fx-background-color: #160324;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 150px;
+}
+#boton-inicio {
+    -fx-background-color: #160324;
+    -fx-pref-width: 280px;
+    -fx-pref-height: 350px;
+}
+
+.text-field, .password-field {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #ccc;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.text-field:focused {
+    -fx-border-color: grey;
+    -fx-prompt-text-fill: white;
+    -fx-text-fill: white;
+}
+
+.text-field .prompt-text {
+    -fx-text-fill: white;
+}
+
+.combo-box {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-radius: 5;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+.combo-box .text-field {
+    -fx-text-fill: white;
+}
+.combo-box .cell {
+    -fx-text-fill: white;
+    -fx-background-color: #00000f;
+}
+
+.check-box {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+}
+.check-box:hover {
+    -fx-cursor: hand;
+    -fx-text-fill: #c0aaff;
+}
+.check-box:selected .box {
+    -fx-background-color: #4B0082;
+    -fx-text-fill: #4B0082;
+    -fx-border-color: #4B0082;
+}
+
+.date-picker {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 0 0 2 0;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+.date-picker .text-field {
+    -fx-text-fill: white;
+}
+.date-picker:hover {
+    -fx-border-color: #c0aaff;
+}
+
+.list-view {
+    -fx-background-color: #00000f;
+    -fx-control-inner-background: #00000f;
+    -fx-border-color: #4B0082;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 8px;
+}
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #4B0082;
+}
+.list-cell:hover {
+    -fx-background-color: #160324;
+}
+.list-cell:selected {
+    -fx-background-color: #160324;
+    -fx-text-fill: white;
+}
+
+.titled-pane .text {
+    -fx-background-color: #4B0082;
+    -fx-fill: white;
+}
+.title {
+    -fx-background-color: #4B0082;
+}
+
+.warning-alert .header-panel {
+    -fx-background-color: #00000f;
+}
+.warning-alert .content.label {
+    -fx-text-fill: white;
+}
+.error-alert .header-panel{
+    -fx-background-color: #00000f;
+}
+.error-alert .content.label {
+    -fx-text-fill: white;
+}
