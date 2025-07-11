@@ -1,0 +1,59 @@
+Table viajes {
+  idViaje INTEGER [pk, increment]
+  cantidadCuposPasajeros INTEGER
+  cantidadCuposPaqueteria INTEGER
+  idBus VARCHAR(7) [ref: > buses.placa]
+  fechayHora TIMESTAMP
+  ciudadOrigen VARCHAR [ref: > sedes.nombre]
+  ciudadDestino VARCHAR [ref: > sedes.nombre]
+  cuposLlenosPasajeros BOOLEAN
+  cuposLlenosPaqueteria BOOLEAN
+}
+
+Table boletoOfacturaViajes {
+  id INTEGER [pk, increment]
+  idViaje INTEGER [ref: > viajes.idViaje]
+  nombreUsuario VARCHAR(40)
+  idUsuario INTEGER
+  equipaje BOOLEAN
+  cantidadEquipaje INTEGER
+  pesoEquipaje INTEGER
+}
+
+Table facturaEnvios {
+  id INTEGER [pk, increment]
+  idViaje INTEGER [ref: > viajes.idViaje]
+  nombreRemitente VARCHAR(40)
+  idRemitente INTEGER
+  nombreDestinatario VARCHAR(40)
+  idDestinatario INTEGER
+  pesoPaquete INTEGER
+}
+
+Table buses {
+  placa VARCHAR(7) [pk]
+  conductor VARCHAR(40)
+  empresa VARCHAR(40)
+  aforo INTEGER
+  cantidadDePaquetes INTEGER
+}
+
+Table sedes {
+  nombre VARCHAR(40) [pk]
+  direccion VARCHAR(40)
+}
+Table pagosBoletos {
+  idPago INTEGER [pk, increment]
+  idBoleto INTEGER [ref: > boletoOfacturaViajes.id]
+  metodoPago VARCHAR(40)
+  numeroTarjeta VARCHAR(20)
+  precio INTEGER
+}
+
+Table pagosEnvios {
+  idPago INTEGER [pk, increment]
+  idFacturaEnvio INTEGER [ref: > facturaEnvios.id]
+  metodoPago VARCHAR(40)
+  numeroTarjeta VARCHAR(20)
+  precio INTEGER
+}
